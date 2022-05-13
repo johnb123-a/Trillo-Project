@@ -1,9 +1,7 @@
-////////////////////////////////////////////////
-// BUTTON INLINE
 .btn-inline {
   background-color: transparent;
   border: none;
-  border-bottom: 1px solid currentColor; // currentColor allows the hover color to change as well
+  border-bottom: 1px solid currentColor;
   color: var(--color-primary);
   cursor: pointer;
   display: inline-block;

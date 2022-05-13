@@ -1,5 +1,3 @@
-////////////////////////////////////////////////
-// SIDE NAVIGATION
 .side-nav {
   font-size: 1.4rem;
   list-style: none;
@@ -35,9 +33,7 @@
 
   &__item:hover::before,
   &__item--active::before {
-    transform: scaleY(
-      1
-    ); // grows from the middle because of transform-origin: center
+    transform: scaleY(1);
     width: 100%;
   }
 
@@ -52,10 +48,10 @@
     position: relative;
     text-decoration: none;
     text-transform: uppercase;
-    z-index: 10; // only works if it has a position
+    z-index: 10;
 
     display: flex;
-    align-items: center; // vertically align items in this container
+    align-items: center;
 
     @media only screen and (max-width: $bp-medium) {
       justify-content: center;
@@ -74,10 +70,4 @@
       width: 2rem;
     }
   }
-
-  // & span {
-  //   @media only screen and (max-width: $bp-small) {
-  //     display: none;
-  //   }
-  // }
 }

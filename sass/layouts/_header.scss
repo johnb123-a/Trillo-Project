@@ -5,10 +5,10 @@
   display: flex;
   font-size: 1.4rem;
   height: 7rem;
-  justify-content: space-between; // aligns flex items along main axis
+  justify-content: space-between;
 
   @media only screen and (max-width: $bp-smallest) {
-    align-content: space-around; // adjust rows
+    align-content: space-around;
     flex-wrap: wrap;
     height: 11rem;
     margin-bottom: 1.5rem;

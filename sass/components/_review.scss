@@ -1,5 +1,3 @@
-////////////////////////////////////////////////
-// REVIEW
 .review {
   background-color: var(--color-white);
   box-shadow: var(--shadow-light-1);
@@ -16,7 +14,7 @@
   &__text {
     margin-bottom: 2rem;
     z-index: 10;
-    position: relative; //only works  if you set the position
+    position: relative;
   }
 
   &__user {
