@@ -1,5 +1,3 @@
-////////////////////////////////////////////////
-// GALLERY
 .gallery {
   display: flex;
 
@@ -10,7 +8,7 @@
   &__photo {
     display: block;
     transition: all 0.3s;
-    width: 100%; // always define a % width for responsive images
+    width: 100%;
 
     &:hover {
       filter: brightness(0.4);
@@ -19,7 +17,7 @@
 
   &__photo:hover + &__caption {
     opacity: 1;
-    pointer-events: none; // removes flickering
+    pointer-events: none;
     top: 50%;
     transform: translate(-50%, -50%);
     visibility: visible;

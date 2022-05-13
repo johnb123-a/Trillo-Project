@@ -1,5 +1,3 @@
-////////////////////////////////////////////////
-// HOTEL OVERVIEW
 .overview {
   align-items: center;
   border-bottom: var(--line);
@@ -25,8 +23,7 @@
 
   &__stars {
     display: flex;
-    //flex: 1; // occupy and grows but takes up white space.
-    margin-right: auto; // pushes content on the right all the way to the other side.
+    margin-right: auto;
     @media only screen and (max-width: $bp-smallest) {
       flex: 1;
       justify-content: center;

@@ -1,5 +1,3 @@
-////////////////////////////////////////////////
-// LIST
 .list {
   border-bottom: var(--line);
   border-top: var(--line);
@@ -21,11 +19,9 @@
     margin-right: 0.7rem;
     width: 1rem;
 
-    // Older browsers
     background-image: url("../img/chevron-thin-right.svg");
     background-size: cover;
 
-    // Newer browsers -- masks
     @supports ((mask-image: url()) or (-webkit-mask-image: url())) {
       background-color: var(--color-primary);
       -webkit-mask-image: url("../img/chevron-thin-right.svg");
@@ -33,7 +29,7 @@
       mask-image: url("../img/chevron-thin-right.svg");
       mask-size: cover;
 
-      background-image: none; // background image is still being applied
+      background-image: none;
     }
   }
 }
