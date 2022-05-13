@@ -1,0 +1,31 @@
+////////////////////////////////////////////////
+// BUTTON INLINE
+.btn-inline {
+  background-color: transparent;
+  border: none;
+  border-bottom: 1px solid currentColor; // currentColor allows the hover color to change as well
+  color: var(--color-primary);
+  cursor: pointer;
+  display: inline-block;
+  font-size: inherit;
+  padding-bottom: 2px;
+  transition: all 0.2s;
+
+  & span {
+    margin-left: 0.3rem;
+    transition: margin-left 0.2s;
+  }
+
+  &:hover {
+    color: var(--color-grey-dark-1);
+
+    span {
+      margin-left: 8px;
+    }
+  }
+
+  &:focus {
+    animation: pulsate 1s infinite;
+    outline: none;
+  }
+}

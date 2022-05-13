@@ -1,0 +1,51 @@
+////////////////////////////////////////////////
+// GALLERY
+.gallery {
+  display: flex;
+
+  &__item {
+    position: relative;
+  }
+
+  &__photo {
+    display: block;
+    transition: all 0.3s;
+    width: 100%; // always define a % width for responsive images
+
+    &:hover {
+      filter: brightness(0.4);
+    }
+  }
+
+  &__photo:hover + &__caption {
+    opacity: 1;
+    pointer-events: none; // removes flickering
+    top: 50%;
+    transform: translate(-50%, -50%);
+    visibility: visible;
+  }
+
+  &__caption {
+    color: var(--color-white);
+    font-weight: 600;
+    font-size: 2.5rem;
+    left: 50%;
+    opacity: 0;
+    position: absolute;
+    text-align: center;
+    top: 0%;
+    transform: translate(-50%, -50%);
+    transition: all 0.2s;
+    visibility: hidden;
+    width: 100%;
+  }
+  @media only screen and (max-width: $bp-medium),
+    only screen and (hover: none) {
+    &__photo:hover {
+      filter: none;
+    }
+    &__photo:hover + &__caption {
+      opacity: 0;
+    }
+  }
+}

@@ -1,0 +1,115 @@
+////////////////////////////////////////////////
+// SEARCH
+.search {
+  flex: 0 0 40%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+
+  @media only screen and (max-width: $bp-small) {
+    flex: 1;
+    order: 1;
+  }
+  @media only screen and (max-width: $bp-smallest) {
+    flex: 0 0 100%;
+    margin-top: 1rem;
+    background-color: var(--color-grey-light-2);
+  }
+
+  &__input {
+    background-color: var(--color-grey-light-2);
+    border: none;
+    border-radius: 100px;
+    color: inherit;
+    font-family: inherit;
+    font-size: inherit;
+    margin-right: -3.25rem; // move icon in the input
+    padding: 0.7rem 2rem;
+    transition: all 0.2s;
+    width: 90%;
+
+    &:focus {
+      background-color: var(--color-grey-light-3);
+      outline: none;
+      width: 100%;
+    }
+
+    &::-webkit-input-placeholder {
+      color: var(--color-grey-light-4);
+      font-weight: 100;
+    }
+  }
+
+  &__input:focus + &__button {
+    background-color: var(--color-grey-light-3);
+  }
+
+  &__button {
+    background-color: var(--color-grey-light-2);
+    border: none;
+
+    &:focus {
+      outline: none;
+    }
+
+    &:active {
+      transform: translateY(2px);
+    }
+  }
+
+  &__icon {
+    fill: var(--color-grey-dark-3);
+    height: 2rem;
+    width: 2rem;
+  }
+
+  &__input:focus ~ &__latest-searches {
+    opacity: 1;
+    visibility: visible;
+    width: 100%;
+  }
+
+  &__latest-searches {
+    background-color: var(--color-white);
+    border-radius: 0.8rem;
+    box-shadow: var(--shadow-dark-1);
+    opacity: 0;
+    padding: 1rem 2rem;
+    position: absolute;
+    top: 4.5rem;
+    transition: all 0.5s;
+    visibility: hidden;
+    width: 90%;
+    z-index: 100;
+
+    @media only screen and (max-width: $bp-smallest) {
+      border-radius: 0;
+      top: 100%;
+    }
+  }
+
+  &__title {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 1rem;
+  }
+
+  &__list {
+    list-style: none;
+  }
+
+  &__query {
+    align-items: center;
+    display: flex;
+    padding: 1rem 0.5rem;
+
+    &:hover {
+      background-color: var(--color-grey-light-2);
+    }
+  }
+
+  &__icon {
+    margin-right: 1rem;
+  }
+}

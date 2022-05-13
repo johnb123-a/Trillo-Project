@@ -1,0 +1,17 @@
+.description {
+  background-color: var(--color-white);
+  box-shadow: var(--shadow-light-1);
+  flex: 0 0 60%;
+  margin-right: 4.5rem;
+  padding: 3rem;
+
+  @media only screen and (max-width: $bp-medium) {
+    padding: 2rem;
+    margin-right: 3rem;
+  }
+
+  @media only screen and (max-width: $bp-small) {
+    margin-right: 0;
+    margin-bottom: 3rem;
+  }
+}

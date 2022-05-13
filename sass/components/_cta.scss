@@ -1,0 +1,89 @@
+////////////////////////////////////////////////
+// CALL TO ACTION
+.cta {
+  padding: 3.5rem;
+  text-align: center;
+
+  @media only screen and (max-width: $bp-medium) {
+    padding: 2.5rem 0;
+  }
+
+  &__book-now {
+    font-size: 2rem;
+    font-weight: 300;
+    margin-bottom: 2.5rem;
+    text-transform: uppercase;
+
+    @media only screen and (max-width: $bp-smallest) {
+      padding: 0 2rem;
+    }
+  }
+}
+
+////////////////////////////////////////////////
+// CALL TO ACTION
+.btn {
+  background-image: linear-gradient(
+    to right,
+    var(--color-primary-light),
+    var(--color-primary-dark)
+  );
+  border: none;
+  border-radius: 100px;
+  color: var(--color-white);
+  cursor: pointer;
+  font-size: 1.5rem;
+  font-weight: 300;
+  overflow: hidden;
+  position: relative;
+  text-transform: uppercase;
+
+  & > * {
+    display: inline-block;
+    height: 100%;
+    transition: all 0.2s; //it´s not working with background-images
+    width: 100%;
+  }
+
+  &__visible {
+    padding: 2rem 7.5rem;
+  }
+
+  &__invisible {
+    position: absolute;
+    left: 0;
+    padding: 2rem 0;
+    top: -100%; // move up exactly the size of the element
+  }
+
+  &:hover {
+    background-image: linear-gradient(
+      to left,
+      var(--color-primary-light),
+      var(--color-primary-dark)
+    );
+  }
+
+  &:hover &__visible {
+    transform: translateY(100%);
+  }
+
+  &:hover &__invisible {
+    top: 0;
+  }
+
+  &:focus {
+    animation: pulsate 1s infinite;
+    outline: none;
+  }
+
+  @media only screen and (max-width: $bp-medium),
+    only screen and (hover: none) {
+    &:hover &__visible {
+      transform: translateY(0);
+    }
+    &:hover &__invisible {
+      top: -100%;
+    }
+  }
+}

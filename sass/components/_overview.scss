@@ -1,0 +1,92 @@
+////////////////////////////////////////////////
+// HOTEL OVERVIEW
+.overview {
+  align-items: center;
+  border-bottom: var(--line);
+  display: flex;
+  padding: 1rem;
+  @media only screen and (max-width: $bp-smallest) {
+    flex-wrap: wrap;
+  }
+  &__heading {
+    font-size: 2.25rem;
+    font-weight: 500;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    padding: 1.5rem 3rem;
+
+    @media only screen and (max-width: $bp-small) {
+      text-align: start;
+      font-size: 1.8rem;
+      padding: 1.25rem 2rem;
+      flex: 0 0 50%;
+    }
+  }
+
+  &__stars {
+    display: flex;
+    //flex: 1; // occupy and grows but takes up white space.
+    margin-right: auto; // pushes content on the right all the way to the other side.
+    @media only screen and (max-width: $bp-smallest) {
+      flex: 1;
+      justify-content: center;
+    }
+  }
+
+  &__icon-star,
+  &__icon-location {
+    fill: var(--color-primary);
+    height: 1.75rem;
+    width: 1.75rem;
+  }
+
+  &__location {
+    align-items: center;
+    display: flex;
+    font-size: 1.2rem;
+    @media only screen and (max-width: $bp-smallest) {
+      padding-left: 1.5rem;
+      flex: 0 0 50%;
+      justify-content: flex-start;
+    }
+  }
+
+  &__icon-location {
+    margin-right: 0.5rem;
+  }
+
+  &__rating {
+    align-self: stretch;
+    background-color: var(--color-primary);
+    color: var(--color-white);
+    margin-left: 3rem;
+    padding: 0 2.25rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+    @media only screen and (max-width: $bp-smallest) {
+      flex: 1;
+    }
+  }
+
+  &__rating-average {
+    font-size: 2.25rem;
+    font-weight: 300;
+    margin-bottom: -3px;
+
+    @media only screen and (max-width: $bp-small) {
+      font-size: 1.8rem;
+    }
+  }
+
+  &__rating-count {
+    font-size: 0.8rem;
+    text-transform: uppercase;
+
+    @media only screen and (max-width: $bp-small) {
+      font-size: 0.5rem;
+    }
+  }
+}
