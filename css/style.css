@@ -9,6 +9,8 @@
   --color-grey-dark-1: #333;
   --color-grey-dark-2: #777;
   --color-grey-dark-3: #999;
+  --color-white: #fff;
+  --color-black: #000;
   --shadow-dark: 0 2rem 6rem rgba(0, 0, 0, 0.3);
   --shadow-light: 0 2rem 5rem rgba(0, 0, 0, 0.06);
   --line: 1px solid var(--color-grey-light-2); }
@@ -90,7 +92,7 @@ body {
     visibility: visible;
     width: 100%; }
   .search__latest-searches {
-    background-color: var(--color-grey-light-1);
+    background-color: var(--color-white);
     border-radius: 0.8rem;
     box-shadow: var(--shadow-dark-1);
     opacity: 0;
@@ -373,7 +375,7 @@ body {
   display: flex; }
   .overview__heading {
     font-size: 2.25rem;
-    font-weight: 300;
+    font-weight: 500;
     text-transform: uppercase;
     letter-spacing: 1px;
     padding: 1.5rem 3rem; }
@@ -599,10 +601,10 @@ body {
     outline: none; }
 
 .container {
-  max-width: 120rem;
+  background-color: var(--color-grey-light-1);
+  box-shadow: var(--shadow-dark-1);
   margin: 8rem auto;
-  background-color: var(--color-grey-light-2);
-  box-shadow: var(--shadow-dark);
+  max-width: 120rem;
   min-height: 50rem; }
   @media only screen and (max-width: 75em) {
     .container {
@@ -611,18 +613,19 @@ body {
       width: 100%; } }
 
 .header {
-  font-size: 1.4rem;
-  height: auto;
-  background-color: var(--color-grey-light-1);
-  border-bottom: 1px solid var(--color-grey-light-2);
-  display: flex;
-  justify-content: space-between;
   align-items: center;
-  padding: 1rem 0 1rem 0; }
+  background-color: var(--color-white);
+  border-bottom: var(--line);
+  display: flex;
+  font-size: 1.4rem;
+  height: 7rem;
+  justify-content: space-between; }
   @media only screen and (max-width: 31.25em) {
     .header {
+      align-content: space-around;
       flex-wrap: wrap;
-      align-content: space-around; } }
+      height: 11rem;
+      margin-bottom: 1.5rem; } }
 
 .content {
   display: flex; }
@@ -632,39 +635,45 @@ body {
 
 .sidebar {
   background-color: var(--color-grey-dark-1);
-  flex: 0 0 18%;
   display: flex;
+  flex: 0 0 18%;
   flex-direction: column;
   justify-content: space-between; }
 
 .hotel-view {
-  background-color: var(--color-grey-light-1);
+  background-color: var(--color-white);
   flex: 1; }
 
 .detail {
-  font-size: 1.4rem;
+  background-color: var(--color-grey-light-1);
+  border-bottom: var(--line);
   display: flex;
-  padding: 4.5rem;
-  background-color: var(--color-grey-light-2);
-  border-bottom: var(--line); }
+  font-size: 1.4rem;
+  padding: 4.5rem; }
   @media only screen and (max-width: 56.25em) {
     .detail {
-      flex-direction: column;
-      width: 100%; } }
+      padding: 3rem; } }
+  @media only screen and (max-width: 37.5em) {
+    .detail {
+      flex-direction: column; } }
 
 .description {
-  background-color: var(--color-grey-light-1);
-  box-shadow: var(--shadow-light);
-  padding: 3rem;
+  background-color: var(--color-white);
+  box-shadow: var(--shadow-light-1);
   flex: 0 0 60%;
-  margin-right: 4.5rem; }
+  margin-right: 4.5rem;
+  padding: 3rem; }
   @media only screen and (max-width: 56.25em) {
+    .description {
+      padding: 2rem;
+      margin-right: 3rem; } }
+  @media only screen and (max-width: 37.5em) {
     .description {
       margin-right: 0;
       margin-bottom: 3rem; } }
 
 .user-reviews {
-  flex: 1;
+  align-items: center;
   display: flex;
-  flex-direction: column;
-  align-items: center; }
+  flex: 1;
+  flex-direction: column; }
