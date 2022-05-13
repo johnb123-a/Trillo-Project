@@ -1,3 +1,27 @@
+@import "./base/animation";
+@import "./base/utilities";
+@import "./base/variables";
 @import "./base/base";
-@import "./base/components";
-@import "./base/layout";
+
+@import "./components/btn-inline";
+@import "./components/cta";
+@import "./components/gallery";
+@import "./components/legal";
+@import "./components/list";
+@import "./components/logo";
+@import "./components/overview";
+@import "./components/paragraph";
+@import "./components/recommend";
+@import "./components/review";
+@import "./components/search";
+@import "./components/side-nav";
+@import "./components/user-nav";
+
+@import "./layouts/container";
+@import "./layouts/content";
+@import "./layouts/description";
+@import "./layouts/detail";
+@import "./layouts/header";
+@import "./layouts/hotel-view";
+@import "./layouts/sidebar";
+@import "./layouts/user-reviews";
