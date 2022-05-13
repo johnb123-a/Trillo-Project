@@ -741,7 +741,7 @@
   &__text {
     margin-bottom: 2rem;
     z-index: 10;
-    position: relative;
+    position: relative; //only works  if you set the position
   }
 
   &__user {
@@ -834,7 +834,7 @@
   & > * {
     display: inline-block;
     height: 100%;
-    transition: all 0.2s;
+    transition: all 0.2s; //it´s not working with background-images
     width: 100%;
   }
 
